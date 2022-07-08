@@ -5,7 +5,7 @@
         <li
           v-for="(item, index) in menuTab"
           @click="handleClick(index)"
-          :class="currentIndexOfItem === index ? 'current' : ''"
+          :class="currentIndexOfItem.value === index ? 'current' : ''"
           :key="item.id"
         >
           {{ item.text }}
@@ -46,7 +46,7 @@
         <el-form-item
           prop="duplicatePassword"
           class="item-form"
-          v-show="model === 'register'"
+          v-show="model.value === 'register'"
         >
           <label>重复密码</label>
           <el-input
@@ -90,7 +90,7 @@
 </template>
 
 <script>
-import { reactive, ref, isRef, toRefs, onMount } from "@vue/composition-api";
+import { reactive, ref, isRef, toRefs } from "@vue/composition-api";
 import {
   scriptFilter,
   validateEmailReg,
@@ -201,7 +201,7 @@ export default {
      * vue3生命周期
      */
     //挂载完成后
-    onMount(() => {});
+    //onMounted(() => {});
 
     /**
      * 声明函数，取消了methods
@@ -225,6 +225,7 @@ export default {
     return {
       menuTab,
       model,
+      currentIndexOfItem,
       ruleForm,
       rules,
       handleClick,
