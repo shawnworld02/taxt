@@ -81,7 +81,7 @@
             type="danger"
             @click="submitForm('ruleForm')"
             class="login-btn block"
-            >{{ menuTab[0].text }}</el-button
+            >提交</el-button
           >
         </el-form-item>
       </el-form>

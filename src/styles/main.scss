@@ -1,1 +1,30 @@
 @import "./normalize.scss";
+@import "./sassConfig.scss";
+i[class^=icon]{ //获取类名开头为icon的i标签
+  display:inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 100px;
+  background-color:$color-main;
+  background-repeat:no-repeat;
+}
+.icon-help { 
+  background-image: url(~@/assets/imgs/问号.png); 
+  background-size:50% 50%;
+  background-position:11px;
+}
+.icon-search {
+  background-image: url(~@/assets/imgs/搜索.png); 
+  background-size:50% 50%;
+  background-position:11px;
+}
+.icon-location {
+  background-image: url(~@/assets/imgs/定位.png); 
+  background-size:50% 50%;
+  background-position:11px;
+}
+.icon-user {
+  background-image: url(~@/assets/imgs/用户.png); 
+  background-size:50% 50%;
+  background-position:11px;
+}
